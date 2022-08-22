@@ -1,5 +1,5 @@
 <template>
-    <form action="" @submit.prevent="submitFrom">
+    <form action="" @submit.prevent="submitForm">
         <div class="form-control">
             <label for="email">Your E-mail</label>
             <input type="email" id="email" v-model.trim="email">
@@ -27,10 +27,16 @@ export default {
     methods: {
         submitForm() {
             this.formIsValid = true;
-            if (this.email === '' || this.email.includes('@') || this.message === '') {
+            if (this.email === '' || !this.email.includes('@') || this.message === '') {
                 this.formIsValid = false;
                 return;
             }
+            this.$store.dispatch('requests/contactCoach', {
+                email: this.email,
+                message: this.message,
+                coachId: this.$route.params.id,
+            });
+            this.$router.replace('/coaches');
         },
     }
 }
