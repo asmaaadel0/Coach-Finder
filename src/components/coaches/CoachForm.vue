@@ -36,6 +36,7 @@
 </template>
 <script>
 export default {
+    emits: ['save-data'],
     data() {
         return {
             firstName: '',
@@ -43,11 +44,16 @@ export default {
             description: '',
             rate: '',
             areas: [],
+            formIsValid: true,
         }
 
     },
     methods: {
+        validateForm() {
+            
+        },
         submitFrom() {
+            this.validateForm();
             const formData = {
                 first: this.firstName,
                 last: this.firstName,
@@ -55,7 +61,7 @@ export default {
                 rate: this.rate,
                 areas: this.areas
             };
-            console.log(formData);
+            this.$emit('save-data', formData);
         }
     }
 }
