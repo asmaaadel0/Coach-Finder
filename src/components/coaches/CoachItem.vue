@@ -14,11 +14,10 @@
 <script>
 import BaseButton from '../ui/BaseButton.vue';
 export default {
-  components: { BaseButton },
+    components: { BaseButton },
     props: ['id', 'firstName', 'lastName', 'rate', 'areas'],
     computed: {
         fullName() {
-            console.log(this.firstName + ' ' + this.lastName)
             return this.firstName + ' ' + this.lastName;
         },
         coachContactLink() {
