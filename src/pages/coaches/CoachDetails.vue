@@ -37,7 +37,8 @@ export default {
             return this.selectedCoach.firstName + ' ' + this.selectedCoach.lastName;
         },
         contactLink() {
-            return this.$route.path + '/' + this.id + '/contact';             // /coaches/c1
+            console.log(this.$route.path + '/' + this.id + '/contact')
+            return this.$route.path ;            // /coaches/c1
         },
         rate() {
             return this.selectedCoach.hourlyRate;
