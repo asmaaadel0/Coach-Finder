@@ -8,7 +8,7 @@ export default {
       hourlyRate: data.rate,
       areas: data.areas,
     };
-
+    console.log(data.first, " ", data.last);
     const response = await fetch(
       `https://coach-finder-e9c99-default-rtdb.firebaseio.com/coaches/${userId}.json`,
       {
@@ -28,7 +28,7 @@ export default {
       id: userId,
     });
   },
-  async loadCoaches(context,payload) {
+  async loadCoaches(context, payload) {
     if (!payload.forceRefresh && !context.getters.shouldUpdate) {
       return;
     }

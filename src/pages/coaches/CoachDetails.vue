@@ -38,7 +38,8 @@ export default {
         },
         contactLink() {
             console.log(this.$route.path + '/' + this.id + '/contact')
-            return this.$route.path ;            // /coaches/c1
+            return '/coaches/' + this.id + '/contact';
+            //return this.$route.path + '/contact' ;            // /coaches/c1
         },
         rate() {
             return this.selectedCoach.hourlyRate;
