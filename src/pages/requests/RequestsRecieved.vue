@@ -1,20 +1,22 @@
 <template>
-    <base-dialog :show="!!error" title="An error accurred!" @close="handleError">
-        <p>{{ error }}</p>
-    </base-dialog>
-    <section>
-        <base-card>
-            <header>
-                <h2>Requests Recieved</h2>
-            </header>
-            <base-spinner v-if="isLoading"></base-spinner>
-            <ul v-else-if="hasRequests">
-                <requests-item v-for="req in recievedRequests" :key="req.id" :email="req.userEmail"
-                    :message="req.message"></requests-item>
-            </ul>
-            <h3 v-else>You haven't recieved any requests yet!</h3>
-        </base-card>
-    </section>
+    <div>
+        <base-dialog :show="!!error" title="An error accurred!" @close="handleError">
+            <p>{{ error }}</p>
+        </base-dialog>
+        <section>
+            <base-card>
+                <header>
+                    <h2>Requests Recieved</h2>
+                </header>
+                <base-spinner v-if="isLoading"></base-spinner>
+                <ul v-else-if="hasRequests">
+                    <requests-item v-for="req in recievedRequests" :key="req.id" :email="req.userEmail"
+                        :message="req.message"></requests-item>
+                </ul>
+                <h3 v-else>You haven't recieved any requests yet!</h3>
+            </base-card>
+        </section>
+    </div>
 </template>
 <script>
 import RequestsItem from '../../components/requests/RequestsItem.vue';
