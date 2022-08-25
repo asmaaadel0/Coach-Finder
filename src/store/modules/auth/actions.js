@@ -1,9 +1,9 @@
 export default {
   async login(context, payload) {
     const response = await fetch(
-      'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyANLszfxfbBN9BovIg-tjosFc1ykRRGc0k',
+      "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyANLszfxfbBN9BovIg-tjosFc1ykRRGc0k",
       {
-        method: 'POST',
+        method: "POST",
         body: JSON.stringify({
           email: payload.email,
           password: payload.password,
@@ -17,13 +17,13 @@ export default {
     if (!response.ok) {
       console.log(responseData);
       const error = new Error(
-        responseData.message || 'Failed to authenticate. Check your login data.'
+        responseData.message || "Failed to authenticate. Check your login data."
       );
       throw error;
     }
 
     console.log(responseData);
-    context.commit('setUser', {
+    context.commit("setUser", {
       token: responseData.idToken,
       userId: responseData.localId,
       tokenExpiration: responseData.expiresIn,
@@ -31,9 +31,9 @@ export default {
   },
   async signup(context, payload) {
     const response = await fetch(
-      'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyANLszfxfbBN9BovIg-tjosFc1ykRRGc0k',
+      "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyANLszfxfbBN9BovIg-tjosFc1ykRRGc0k",
       {
-        method: 'POST',
+        method: "POST",
         body: JSON.stringify({
           email: payload.email,
           password: payload.password,
@@ -47,16 +47,23 @@ export default {
     if (!response.ok) {
       console.log(responseData);
       const error = new Error(
-        responseData.message || 'Failed to authenticate. Check your login data.'
+        responseData.message || "Failed to authenticate. Check your login data."
       );
       throw error;
     }
 
     console.log(responseData);
-    context.commit('setUser', {
+    context.commit("setUser", {
       token: responseData.idToken,
       userId: responseData.localId,
       tokenExpiration: responseData.expiresIn,
+    });
+  },
+  logout(context) {
+    context.commit("setUser", {
+      token: null,
+      userId: null,
+      tokenExpiration: null,
     });
   },
 };
