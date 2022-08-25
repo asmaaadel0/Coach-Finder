@@ -12,8 +12,20 @@ export default {
   components: {
     TheHeader,
   },
+  computed: {
+    didAutoLogput() {
+      return this.$store.getters.didAutoLogput;
+    }
+  },
   created() {
     this.$store.dispatch("tryLogin");
+  },
+  watch: {
+    didAutoLogput(curValue, oldValue) {
+      if (curValue && curValue !== oldValue) {
+        this.$router.replace("/coaches");
+      }
+    }
   }
 }
 </script>
