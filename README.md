@@ -34,11 +34,11 @@ helps us become better in web development, whatever.
 - npm run serve
 
 ## Website link <a name = "link"></a>
-Netlify Hosting:
-- https://coach-finder-web-app.netlify.app/
+- Netlify Hosting:
+  - https://coach-finder-web-app.netlify.app/
 
-Firebase Hosting:
-- https://coach-finder-e9c99.web.app
+- Firebase Hosting:
+  - https://coach-finder-e9c99.web.app
 
 ## Contributors <a name = "Contributors"></a>
 
