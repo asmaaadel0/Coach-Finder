@@ -21,7 +21,8 @@ for the find a coach part:
 - we want to be able to list all available coaches, So all the coaches that signed up with our application.
 - we want to be able to view the coach details.
 - We will be able to register as a coach, and we'll be able to contact a coach.
-- the contact a coach feature also establishes the connection to the other part of this web app
+- the contact a coach feature also establishes the connection to the other part of this web app.
+
 for the the requests part:
 - we will be able to send such requests to coaches.
 - And as a coach, we can view incoming requests so that we then potentially can reply to them.
