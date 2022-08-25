@@ -1,12 +1,11 @@
 ## 📝 Table of Contents
 
-- [📝 Table of Contents](#-table-of-contents)
-- [About <a name = "about"></a>](#about-)
-- [website description <a name = "website-description"></a>](#website-description-)
-- [Project setup <a name = "Project-setup"></a>](#project-setup-)
-- [Compiles and hot-reloads for development <a name = "Compiles-and-hot-reloads-for-development"></a>](#compiles-and-hot-reloads-for-development-)
-- [Website link <a name = "link"></a>](#website-link-)
-- [Contributors <a name = "Contributors"></a>](#contributors-)
+- [About](#about)
+- [website description](#website-description)
+- [Project setup](#Project-setup)
+- [Compiles and hot-reloads for development](#Compiles-and-hot-reloads-for-development)
+- [Website link](#link)
+- [Contributors](#Contributors)
 
 ## About <a name = "about"></a>
 - The Coach Finder App is an Web App which should help us find a coach that, for example,
