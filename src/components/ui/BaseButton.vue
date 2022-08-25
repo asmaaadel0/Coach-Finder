@@ -28,8 +28,8 @@ a {
     text-decoration: none;
     padding: 0.75rem 1.5rem;
     font: inherit;
-    background-color: #1c3638;
-    border: 1px solid #1c3638;
+    background-color: #038084;
+    border: 1px solid #004f52;
     color: white;
     cursor: pointer;
     border-radius: 30px;
@@ -41,8 +41,8 @@ a:hover,
 a:active,
 button:hover,
 button:active {
-    background-color: #025a5d;
-    border-color: #025a5d;
+    background-color: #028e93;
+    border-color: #028e93;
 }
 
 .flat {

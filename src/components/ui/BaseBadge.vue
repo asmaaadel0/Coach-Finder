@@ -25,17 +25,17 @@ export default {
 }
 
 .frontend {
-    background-color: #201919;
+    background-color: #036164;
     color: white;
 }
 
 .backend {
-    background-color: #333434;
+    background-color: #038085;
     color: white;
 }
 
 .career {
-    background-color: #525151;
+    background-color: #01a5ab;
     color: white;
 }
 </style>
